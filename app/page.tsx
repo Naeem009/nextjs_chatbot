@@ -1,4 +1,10 @@
 import Image from "next/image";
+import { ChatVertexAI } from "@langchain/google-vertexai";
+
+const llm = new ChatVertexAI({
+  model: "gemini-1.5-flash",
+  temperature: 0
+});
 
 export default function Home() {
   return (
